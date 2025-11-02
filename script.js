@@ -164,4 +164,10 @@ function addMsg(role,text){
 const log=$("chatlog");const div=document.createElement("div");
 div.textContent=(role==="user"?"Вы: ":"AI Bayan: ")+text;
 log.appendChild(div);log.scrollTop=log.scrollHeight;
+// Заставка AI Bayan
+window.addEventListener("load",()=>{
+  const splash=document.getElementById("splash");
+  setTimeout(()=>{splash.style.display="none";show("login");},3000);
+});
+  
 }
