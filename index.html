@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Bayan Darýn 5–6 Olympiad App v7 Full</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <button onclick="goHome()">🏠 Меню</button>
+    <button onclick="goPrev()">⬅️ Назад</button>
+    <button onclick="goNext()">➡️ Вперёд</button>
+  </div>
+  <div>⭐ <span id="stars">0</span></div>
+</header>
+
+<section id="login" class="section active">
+  <div class="card">
+    <h2>AI Bayan Darýn 5–6 Olympiad 2020–2025</h2>
+    <p>Введите PIN:</p>
+    <input id="pin" type="password" placeholder="1402">
+    <button onclick="checkPIN()">Войти</button>
+  </div>
+</section>
+
+<section id="home" class="section">
+  <div class="card">
+    <h3>Главное меню</h3>
+    <button onclick="show('listening')">🎧 Listening</button>
+    <button onclick="show('reading')">📖 Reading</button>
+    <button onclick="show('use')">🧩 Use of English</button>
+    <button onclick="show('writing')">✍️ Writing</button>
+    <button onclick="show('chat')">🤖 AI Bayan Chat</button>
+    <button onclick="show('journal')">📊 Журнал</button>
+  </div>
+</section>
+
+<section id="listening" class="section">
+  <div class="card">
+    <h3>Listening (2020–2025)</h3>
+    <audio id="audio" controls src="audio/listening_2025.mp3"></audio>
+    <div id="listeningTask"></div>
+  </div>
+</section>
+
+<section id="reading" class="section"><div class="card"><h3>Reading</h3><div id="readingTask"></div></div></section>
+<section id="use" class="section"><div class="card"><h3>Use of English</h3><div id="useTask"></div></div></section>
+<section id="writing" class="section"><div class="card"><h3>Writing</h3><textarea id="essay" rows="6" style="width:100%"></textarea><br><button onclick="saveEssay()">Сохранить</button></div></section>
+
+<section id="chat" class="section">
+  <div class="card">
+    <h3>AI Bayan Chat (offline)</h3>
+    <div id="chatlog"></div>
+    <textarea id="chattext" rows="3" placeholder="Ваш вопрос..."></textarea><br>
+    <button onclick="chatSend()">Отправить</button>
+  </div>
+</section>
+
+<section id="journal" class="section">
+  <div class="card">
+    <h3>👩‍🏫 Журнал</h3>
+    <table>
+      <thead><tr><th>Раздел</th><th>Результат</th><th>Дата</th></tr></thead>
+      <tbody id="jbody"></tbody>
+    </table>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
