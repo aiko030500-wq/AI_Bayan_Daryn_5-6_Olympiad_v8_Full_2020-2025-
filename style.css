@@ -29,3 +29,26 @@ th,td{border:1px solid #2b3d6d;padding:4px;text-align:center}
 }
 @keyframes pulse {from{opacity:0.6;}to{opacity:1;}}
 @keyframes fadeOut {to{opacity:0;visibility:hidden;}}
+#stars {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: 500;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff6a3;
+  border-radius: 50%;
+  animation: fall 4s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  from {transform: translateY(0) scale(1); opacity: 1;}
+  to {transform: translateY(100vh) scale(0.5); opacity: 0;}
+}
