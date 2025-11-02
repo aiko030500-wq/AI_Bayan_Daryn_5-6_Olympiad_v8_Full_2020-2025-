@@ -171,3 +171,26 @@ window.addEventListener("load",()=>{
 });
   
 }
+// Анимация звёздочек на заставке
+function createStar() {
+  const star = document.createElement("div");
+  star.classList.add("star");
+  star.style.left = Math.random() * 100 + "%";
+  star.style.animationDuration = (2 + Math.random() * 3) + "s";
+  document.body.appendChild(star);
+  setTimeout(() => star.remove(), 4000);
+}
+
+setInterval(createStar, 150);
+
+// Анимация звёздочек на заставке
+function createStar() {
+  const star = document.createElement("div");
+  star.classList.add("star");
+  star.style.left = Math.random() * 100 + "%";
+  star.style.animationDuration = (2 + Math.random() * 3) + "s";
+  document.body.appendChild(star);
+  setTimeout(() => star.remove(), 4000);
+}
+
+setInterval(createStar, 150);
