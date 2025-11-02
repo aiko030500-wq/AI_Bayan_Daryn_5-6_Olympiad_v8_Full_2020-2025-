@@ -1,12 +1,18 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Bayan Darýn 5–6 Olympiad App v7 Full</title>
+<title>AI Bayan Darýn Olympiad 5–6 (2020–2025)</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- Заставка -->
+<div id="splash">
+  <h1 class="glow">AI Bayan Darýn Olympiad App 2025</h1>
+</div>
+
 <header>
   <div>
     <button onclick="goHome()">🏠 Меню</button>
@@ -16,6 +22,7 @@
   <div>⭐ <span id="stars">0</span></div>
 </header>
 
+<!-- Вход -->
 <section id="login" class="section active">
   <div class="card" style="text-align:center">
     <h2>AI Bayan Darýn Olympiad 2020–2025</h2>
@@ -25,6 +32,7 @@
   </div>
 </section>
 
+<!-- Главное меню -->
 <section id="home" class="section">
   <div class="card">
     <h3>Главное меню</h3>
@@ -37,38 +45,16 @@
   </div>
 </section>
 
-<section id="listening" class="section">
-  <div class="card">
-    <h3>Listening (2020–2025)</h3>
-    <audio id="audio" controls src="audio/listening_2025.mp3"></audio>
-    <div id="listeningTask"></div>
-  </div>
-</section>
-
+<!-- Разделы -->
+<section id="listening" class="section"><div class="card"><h3>Listening</h3><audio id="audio" controls src="audio/listening_2025.mp3"></audio><div id="listeningTask"></div></div></section>
 <section id="reading" class="section"><div class="card"><h3>Reading</h3><div id="readingTask"></div></div></section>
 <section id="use" class="section"><div class="card"><h3>Use of English</h3><div id="useTask"></div></div></section>
 <section id="writing" class="section"><div class="card"><h3>Writing</h3><textarea id="essay" rows="6" style="width:100%"></textarea><br><button onclick="saveEssay()">Сохранить</button></div></section>
+<section id="chat" class="section"><div class="card"><h3>AI Bayan Chat</h3><div id="chatlog"></div><textarea id="chattext" rows="3" placeholder="Ваш вопрос..."></textarea><br><button onclick="chatSend()">Отправить</button></div></section>
+<section id="journal" class="section"><div class="card"><h3>👩‍🏫 Журнал</h3><table><thead><tr><th>Раздел</th><th>Результат</th><th>Дата</th></tr></thead><tbody id="jbody"></tbody></table></div></section>
 
-<section id="chat" class="section">
-  <div class="card">
-    <h3>AI Bayan Chat (offline)</h3>
-    <div id="chatlog"></div>
-    <textarea id="chattext" rows="3" placeholder="Ваш вопрос..."></textarea><br>
-    <button onclick="chatSend()">Отправить</button>
-  </div>
-</section>
-
-<section id="journal" class="section">
-  <div class="card">
-    <h3>👩‍🏫 Журнал</h3>
-    <table>
-      <thead><tr><th>Раздел</th><th>Результат</th><th>Дата</th></tr></thead>
-      <tbody id="jbody"></tbody>
-    </table>
-  </div>
-</section>
+<div id="stars"></div>
 
 <script src="script.js"></script>
-  <div id="stars"></div>
 </body>
 </html>
